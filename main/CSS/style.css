@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap');
+body {
+ margin: 0;
+ padding: 0;
+ background-color: #000;
+}
+
+.loader {
+  font-size: 10rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 20px;
+  transition: all 0.5s;
+  letter-spacing: 0.2em;
+  display: flex;
+  background: url(https://josuaowebblog.fr/wp-content/uploads/2021/06/briques.jpg ) no-repeat top left #000;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  animation: drop 5s;
+}
+ /* @keyframes blur {
+  0%, 90% {
+   filter: blur(0);
+  }
+ 
+  70% {
+   filter: blur(5px);
+  }
+ } */
+
+.neon1 {
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 42px rgb(230, 18, 124),
+      0 0 77px rgb(230, 18, 124),
+      0 0 100px rgb(230, 18, 124);
+  animation: lumiere 3s linear;
+  animation: flashing 2.6s linear;
+
+}
+.neon2 {
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 42px rgb(230, 18, 124),
+      0 0 77px rgb(230, 18, 124),
+      0 0 100px rgb(230, 18, 124);
+      animation: lumiere 3s linear;
+      animation: flashing 3s linear;
+
+    }
+@keyframes lumiere {
+  0%{
+      text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 42px rgb(230, 18, 124),
+      0 0 77px rgb(230, 18, 124),
+      0 0 100px rgb(230, 18, 124);
+  }
+ 50%{
+      text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 32px rgb(230, 18, 124),
+      0 0 87px rgb(230, 18, 124),
+      0 0 120px rgb(230, 18, 124);
+  }
+}
+@keyframes flashing {
+  0%, 18%, 21%, 32%, 35%, 39%, 42%, 100% {
+    text-shadow:
+      0 0 16px #ffff,
+      0 0 16px #ffff,
+      0 0 32px rgb(230, 18, 124),
+      0 0 64px rgb(230, 18, 124),
+      0 0 90px rgb(230, 18, 124),
+      0 0 124px rgb(230, 18, 124);
+  }
+  20%, 34%, 41% {
+    text-shadow: none;
+  }    
+}
+@keyframes drop {
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+
+
