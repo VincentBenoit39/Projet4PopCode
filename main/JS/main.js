@@ -1,10 +1,10 @@
-const loading = document.querySelectorAll(".loader") ;
-const content = document.getElementById("displayContent") ;
+const loading = document.querySelector(".loader") ;
+const post = document.querySelector(".post") ;
 
-window.load = setTimeout(showContent, 2000);
+window.onload = setTimeout(text, 3500);
+console.log(loading);
 
-function showContent() {
+function text() {
   loading.style.display = "none";
-  loading.style.background = "none";
-  content.style.display = "block";
-}
+  post.style.display = "flex";
+};
