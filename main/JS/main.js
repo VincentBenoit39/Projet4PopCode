@@ -1,7 +1,7 @@
 const loading = document.querySelector(".loader") ;
 const post = document.querySelector(".post") ;
 
-window.onload = setTimeout(text, 3500);
+window.onload = setTimeout(text, 3800);
 console.log(loading);
 
 function text() {

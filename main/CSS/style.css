@@ -20,28 +20,46 @@ body{
   letter-spacing: 0.2em;
   display: flex;
   background: url(../Img/bg.svg) #000 center center/cover no-repeat;
-  background-size: cover;
   align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
   animation: drop 4s;
 }
-.mention>a{
-  color: white;
-  font-weight: bold;
-  padding-right: 10px;
-}
+/* ============================mention======================== */
 .mention{
-  padding-right: 20px;
-  font-family: 'Poppins', sans-serif;
   position: absolute;
   bottom: 10px;
   right: 0px;
-  justify-content: space-between;
+  display: flex;
+}
+.m1>a, .m2>a{
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   animation: none;
+  color: white;
+  font-weight: bold;
+  display: inline;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
 }
+.m1:after, .m2:after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  transition: 0.5s cubic-bezier(0.72,-0.01, 0.19, 0.92);
+  background: #ffffff;
+}
+.m1:hover:after {
+  width: 40%;
+}
+.m2:hover:after {
+  width: 100%;
+}
+
 .neon1 {
   text-shadow:
     0 0 7px #fff,
@@ -97,8 +115,21 @@ body{
   
 }
 .post>a{
-  color: #FFAAFF;
+  color: #ffaaff;
+  display: inline;
+  position: relative;
   text-decoration: none;
   padding-bottom: 100px;
-  padding-right: 35px;
+}
+.post>a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  transition: 0.5s cubic-bezier(0.72,-0.01, 0.19, 0.92);
+  background: #ffaaff;
+}
+a:hover:after {
+  width: 100%;
 }
