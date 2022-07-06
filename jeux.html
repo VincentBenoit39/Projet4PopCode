@@ -9,6 +9,13 @@
 </head>
 <body>
   <div class="jeu">
+    <div class="modal-container">
+      <div class="overlay modal-trigger"></div>
+      <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="dialogDesc">
+        <input type="text">
+        <p id="dialogDesc">TAPE UN NOM DE LANGAGE DE PROGRAMMATION</p>
+      </div>
+    </div>    
     <div class="top">
       <div class="left">
         <p class="score">Score</p>
@@ -23,11 +30,11 @@
     </div>
     <div class="bottom">
       <div class="left">
-        <span>zoom</span>
-        <div class="btnZoom"></div>
-        <div class="liste">
-          <a href="">LANGAGES TROUVés</a> 
-        </div>
+        <div class="btnZoom">-<div class="lineZoom"></div>+<span>zoom</span></div>
+        <button>
+          <img src="./main/Img/search.svg" alt="">
+          <span>LANGAGES TROUVÉS</span>
+        </button>
       </div>
       <div class="right">
         <div class="mention">
@@ -41,6 +48,6 @@
       </div>
     </div>
   </div>
-
+<script src="./main/JS/main.js"></script>
 </body>
 </html>
