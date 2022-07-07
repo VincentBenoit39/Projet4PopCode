@@ -9,7 +9,7 @@ body{
     overflow: hidden;
   }
 .jeu{
-  background: url(../Img/Jeu.svg) #000 center center/cover no-repeat;
+  background: url(../Img/jeu.jpg) #000 center center/cover no-repeat;
   height: 100vh;
   width: auto;
 }
@@ -109,13 +109,16 @@ body{
   text-align: center;
   display: flex;
   flex-direction: row;
+  color: rgba(255, 255, 255, 0.38);
   
 }
 .lost::before{
   content: 'X';
+  padding-right: 10px;
 }
 .lost::after{
   content: 'X';
+  padding-left: 10px;
 }
 .top>.right{
   position: absolute;
@@ -126,24 +129,52 @@ body{
   width: 150px;
 }
 /* ====================bottom======================== */
+
 .bottom>.left{
-  position: absolute;
-  bottom: 10px;
-  left: 0px;
   font-family: 'Poppins', sans-serif;
-  display: flex;
 }
 .btnZoom{
   color: white;
-}
-
-.lineZoom{
-  border: 1px solid white;
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  bottom: 10px;
+  left: 0;
   transform: rotate(270deg);
 }
+
+.btnZoom>span:nth-child(1){
+  color: #0AEFF7;
+  position: absolute;
+  left: 190px;
+  top: 30px;
+}
+.btnZoom>span:nth-child(2){
+  position: absolute;
+  left: 170px;
+  top: 30px;
+}
+.btnZoom>span:nth-child(3){
+  position: absolute;
+  left: 10px;
+  top: 29px;
+  transform: rotate(90deg);
+}
+.lineZoom{
+  border: 1px solid white;
+  transform: rotate(90deg);
+  position: absolute;
+  height: 125px;
+  left: 90px;
+  bottom: -105px;
+}
+
 button {
+  position: absolute;
   display: flex;
   height: 3em;
+  bottom: 20px;
+  left: 80px;
   color: white;
   border-color: white;
   font-weight: bold;
@@ -155,19 +186,16 @@ button {
   padding-left: 5px;
   padding-right: 3px;
  }
- 
  button > img {
   margin-right: 5px;
   margin-left: 5px;
   font-size: 20px;
-  transition: all 0.4s ease-in;
+  transition: all 0.2s ease-in;
  }
- 
  button:hover > img {
-  font-size: 1.2em;
-  transform: translateX(-5px);
+  font-size: 1.8em;
+  transform: rotate(360deg);
  }
- 
  button:hover {
   transform: translateY(-2px);
  }
