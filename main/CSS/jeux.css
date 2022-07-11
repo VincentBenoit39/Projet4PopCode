@@ -8,7 +8,7 @@ body{
     height: 100vh;
     overflow: hidden;
   }
-.jeu{
+.zoom{
   background: url(../Img/jeu.jpg) #000 center center/cover no-repeat;
   height: 100vh;
   width: auto;
@@ -119,16 +119,10 @@ input:active{
   text-align: center;
   display: flex;
   flex-direction: row;
+  font-size: 1.5rem;
+  letter-spacing: 10px;
   color: rgba(255, 255, 255, 0.38);
   
-}
-.lost::before{
-  content: 'X';
-  padding-right: 10px;
-}
-.lost::after{
-  content: 'X';
-  padding-left: 10px;
 }
 .top>.right{
   position: absolute;

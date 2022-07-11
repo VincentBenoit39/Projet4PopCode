@@ -670,18 +670,77 @@ function removeClass($element, targetClass) {
 
     $element.className = $element.className.replace(rgx, "");
 }
+// ===========================erreur===================
+let error1 = false
+let error2 = false
+let error3 = false
+
+if(document.addEventListener("click", error));
+
+    if(error1 == false){        
+        document.querySelector(".error1").style = "color:#0AEFF7";
+        error1 = true
+    }
+    if(error1 == true & error2 == false){
+        
+    }
+
+function error(){
+
+}
+
 // ----------------------------tableau langues------------------
 let found = []
 let input = document.querySelector(".input");
 let langues = ["JavaScript", "HTML", "CSS", "SQL", "Python", "Java", "Bash", "Shell", "PowerShell", "C#", "PHP", "TypeScript", "C", "Ruby", "Go", "Assembly", "Swift", "Kotlin", "R", "VBA", "Objective-C", "Scala", "Rust", "Dart", "Elixir", "Clojure", "WebAssembly"]
 
-
-
 if(langues.includes(input.toLowerCase().replace("é", "e"))){
-	result.innerHTML=student+" appartient bien à la promotion";
+	result.innerHTML=langues+" c'est bien une langue de codage";
 	script.stop;
 }
 else{
-	result.innerHTML=student+" n'appartient pas à la promotion"
+	result.innerHTML=student+" n'es pas une langue de codage"
 }
+// ======================modale======================
+const modalContainer = document.querySelector(".modal-container");
+const modalOpen = document.querySelectorAll(".top .right");
+
+modalOpen.forEach(trigger => trigger.addEventListener("click", toggleModal))
+
+function toggleModal(){
+  modalContainer.classList.toggle("active")
+}
+
+// =======================liste languages ======================
+
+        //VARIABLES
+        let languages = ["JavaScript", "HTML", "CSS", "SQL", "Python", "Java", "Bash", "Shell", "PowerShell", "C#", "PHP", "TypeScript", "C", "Ruby", "Go", "Assembly", "Swift", "Kotlin", "R", "VBA", "Objective-C", "Scala", "Rust", "Dart", "Elixir", "Clojure", "WebAssembly"]
+        let trouver = []
+        let result = document.querySelector(".input")
+        let studentDisplay = document.querySelector(".yourTurn")
+        let listeTrouver = document.querySelector(".languagestrouver")
+
+            // IMPORTANT : La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau, la méthode renverra -1.
+
+            //On récupère l'index dans le tableau, de l'apprenant choisi
+            let languesPosition = students.indexOf(langues[index]);
+            console.log(languesPosition)
+
+            //On ajoute dans le tableau vide, l'apprenant choisi
+            trouver.push(langues[index])
+            console.log(trouver)
+         
+            // IMPORTANT : La méthode splice() modifie le contenu d'un tableau en retirant des éléments et/ou en ajoutant de nouveaux éléments à même le tableau.On peut ainsi vider ou remplacer une partie d'un tableau.
+
+            //Maintenant on supprime du tableau apprenant l'apprenant choisi
+            langues.splice(languesPosition, 1)
+            console.log(langues)
+
+            // IMPORTANT : La méthode join() crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'un objet semblable à un tableau). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.
+
+            //On affiche le tableau des apprenants passés
+            modaleTrouver.innerHTML = listeTrouver.join("<br>")
+
+
+
 
