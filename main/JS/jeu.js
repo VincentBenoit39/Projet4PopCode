@@ -722,7 +722,7 @@ let langues = ["JavaScript", "HTML", "CSS", "SQL", "Python", "Java", "Bash", "Sh
 let modalContainer = document.querySelector(".modal-container");
 
 document.addEventListener("click", function(){
-  modalContainer.classList.toggle("active")
+  modalContainer.style.display = "flex";
 })
 
 

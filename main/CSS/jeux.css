@@ -28,13 +28,14 @@ body{
 }
 /* ============================modal=================*/
 .modal-container {
-  z-index: 1;
+  z-index: 12;
   background: #3333338e;
   transition: opacity 0.4s 0.2s ease-out;
   display: none;
   justify-content: center;
+  position: absolute;
   align-items: center;
-  width: 100vw;
+  width: auto;
   height: 100vh;
   transition: visibility 0.4s;
 }
