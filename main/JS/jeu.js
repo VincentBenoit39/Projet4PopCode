@@ -671,10 +671,10 @@ function removeClass($element, targetClass) {
     $element.className = $element.className.replace(rgx, "");
 }
 // ===========================erreur===================
-// let error1 = false
-// let error2 = false
-// let error3 = false
-// let error = document.querySelector('.zoom');
+let error1 = false
+let error2 = false
+let error3 = false
+let error = document.querySelector('.zoom');
 
 // document.addEventListener('click', function () {
 //     if (error1 == false & error1 != true) {
@@ -689,6 +689,7 @@ function removeClass($element, targetClass) {
 //     }
 //     if (error2 == true & error3 == false) {
 //         document.querySelector('.error3').style = 'color: #0AEFF7;'
+//         document.querySelector('.modal').style.display = "flex";
 //         document.querySelector('.modal-GO').style.display = "flex";
 //         error3 = true
 //         return
@@ -719,14 +720,18 @@ let langues = ["JavaScript", "HTML", "CSS", "SQL", "Python", "Java", "Bash", "Sh
 // 	result.innerHTML=student+" n'es pas une langue de codage"
 // }
 // ======================modale======================
-let modalContainer = document.querySelector(".modal-container");
+let modalInput = document.querySelector(".modal");
 
 document.addEventListener("click", function(){
-  modalContainer.style.display = "flex";
+  modalInput.style.display = "flex";
 })
 
 
-
+function touche(event){
+	var touche = window.event ? event.keyCode : event.which;
+	document.getElementById("touche").innerHTML = touche;
+	document.getElementById("toucheContenu").value = "";
+}
 // =======================liste languages ======================
 
         // //VARIABLES
