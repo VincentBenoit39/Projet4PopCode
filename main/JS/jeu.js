@@ -729,8 +729,8 @@ document.addEventListener("click", function(){
 
 function touche(event){
 	var touche = window.event ? event.keyCode : event.which;
-	document.getElementById("touche").innerHTML = touche;
-	document.getElementById("toucheContenu").value = "";
+	document.querySelector(".input").innerHTML = touche;
+	// document.getElementById("toucheContenu").value = "";
 }
 // =======================liste languages ======================
 
