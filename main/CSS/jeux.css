@@ -46,13 +46,17 @@ a{
 .input{
   color: white;
   font-family: 'Poppins', sans-serif;
-  font-size: 3rem;
+  font-size: 2.8rem;
+  text-align: center;
+  text-justify: center;
+  overflow: hidden;
   height: 50px;
   width: 50%;
 }
 .pInput{
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
+  padding-top: 50px;
   color: white;
 }
 
@@ -108,50 +112,40 @@ a{
 .bottom>.left{
   font-family: 'Poppins', sans-serif;
 }
-.btnZoom{
-  color: white;
-  position: absolute;
-  display: flex;
-  flex-direction: row-reverse;
-  bottom: 10px;
-  left: 0;
-  transform: rotate(270deg);
-}
 
-.btnZoom>span:nth-child(1){
+.left>span:nth-child(1){
   color: #0AEFF7;
   position: absolute;
-  left: 190px;
-  top: 30px;
-}
-.btnZoom>span:nth-child(2){
-  position: absolute;
-  left: 170px;
-  top: 30px;
-}
-.btnZoom>span:nth-child(3){
-  position: absolute;
   left: 10px;
-  top: 29px;
-  transform: rotate(90deg);
+  bottom: 230px;
+  transform: rotate(270deg);
+}
+.left>span:nth-child(2){
+  position: absolute;
+  color: white;
+  left: 28px;
+  bottom: 190px;
+}
+.left>span:nth-child(3){
+  position: absolute;
+  color: white;
+  left: 28px;
+  bottom: 20px;
 }
 .lineZoom{
   border: 1px solid white;
-  transform: rotate(90deg);
   position: absolute;
   height: 125px;
-  left: 90px;
-  bottom: -105px;
-  scale: 0;
+  left: 32px;
+  bottom: 55px;
 }
-/* .zoombarreblue{
+.zoombarreblue{
   border: 1px solid #0AEFF7;
-  transform: rotate(90deg);
   position: absolute;
-  height: 125px;
-  left: 90px;
-  bottom: -105px;
-} */
+  height: 1%;
+  left: 32px;
+  bottom: 55px;
+}
 
 button {
   position: absolute;

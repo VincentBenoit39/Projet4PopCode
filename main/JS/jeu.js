@@ -672,8 +672,8 @@ function removeClass($element, targetClass) {
 }
 
 // ========================== Scale Zoom ===========================
-var zoom = document.querySelector('.zoom img');
-var zoombarreblue = document.querySelector('.zoombarreblue');
+var zoom = document.querySelector(".zoom img");
+var zoombarreblue = document.querySelector(".zoombarreblue");
 
 zoom.addEventListener('wheel', function(){
     for (n = 0; n < zoom.dataset.scale; n++){
@@ -743,6 +743,7 @@ window.addEventListener("keydown", function (e) {
         score.innerHTML = check
         modalInput.style.display = "none";
         input.textContent = "";
+
         if (check === 27){
             modalWin.style.display = "flex";
         }
@@ -775,45 +776,6 @@ window.addEventListener("keydown", function (e) {
         }
     }
 })
-
-
-
-
-// // ----------------------------tableau langues------------------
-
-
-
-
-
-// =======================liste languages ======================
-
-        // //VARIABLES
-        // let languages = ["JavaScript", "HTML", "CSS", "SQL", "Python", "Java", "Bash", "Shell", "PowerShell", "C#", "PHP", "TypeScript", "C", "Ruby", "Go", "Assembly", "Swift", "Kotlin", "R", "VBA", "Objective-C", "Scala", "Rust", "Dart", "Elixir", "Clojure", "WebAssembly"]
-        // let trouver = []
-        // let result = document.querySelector(".input")
-        // let studentDisplay = document.querySelector(".yourTurn")
-        // let listeTrouver = document.querySelector(".languagestrouver")
-
-        //     // IMPORTANT : La méthode indexOf() renvoie le premier indice pour lequel on trouve un élément donné dans un tableau. Si l'élément cherché n'est pas présent dans le tableau, la méthode renverra -1.
-
-        //     //On récupère l'index dans le tableau, de l'apprenant choisi
-        //     let languesPosition = students.indexOf(langues[index]);
-        //     console.log(languesPosition)
-
-        //     //On ajoute dans le tableau vide, l'apprenant choisi
-        //     trouver.push(langues[index])
-        //     console.log(trouver)
-         
-        //     // IMPORTANT : La méthode splice() modifie le contenu d'un tableau en retirant des éléments et/ou en ajoutant de nouveaux éléments à même le tableau.On peut ainsi vider ou remplacer une partie d'un tableau.
-
-        //     //Maintenant on supprime du tableau apprenant l'apprenant choisi
-        //     langues.splice(languesPosition, 1)
-        //     console.log(langues)
-
-        //     // IMPORTANT : La méthode join() crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'un objet semblable à un tableau). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.
-
-        //     //On affiche le tableau des apprenants passés
-        //     modaleTrouver.innerHTML = listeTrouver.join("<br>")
 
 
 
