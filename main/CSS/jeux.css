@@ -18,7 +18,7 @@ a{
   margin: 0;
 }
 /* ============================Modal Game Over=================*/ 
-.modal{
+.modalL, .modalG, .modalI{
   display: none;
   height:100vh;
   width: 100vw;
@@ -47,6 +47,8 @@ a{
   color: white;
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
+  height: 50px;
+  width: 50%;
 }
 .pInput{
   font-family: 'Poppins', sans-serif;
@@ -140,7 +142,16 @@ a{
   height: 125px;
   left: 90px;
   bottom: -105px;
+  scale: 0;
 }
+/* .zoombarreblue{
+  border: 1px solid #0AEFF7;
+  transform: rotate(90deg);
+  position: absolute;
+  height: 125px;
+  left: 90px;
+  bottom: -105px;
+} */
 
 button {
   position: absolute;
