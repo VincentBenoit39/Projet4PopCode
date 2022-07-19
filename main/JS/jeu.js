@@ -21,11 +21,17 @@ let score = document.querySelector(".check");
 let error1 = false
 let error2 = false
 let error3 = false
+let check = 0;
+
+
+
+
+
+
 
 window.addEventListener("keydown", function (e) {
     if (
         e.key === "a" ||
-        e.key === "b" || 
         e.key === "c" || 
         e.key === "d" || 
         e.key === "e" || 
