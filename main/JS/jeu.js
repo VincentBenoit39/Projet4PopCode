@@ -9,7 +9,19 @@ zoom.addEventListener('wheel', function(){
     }
 })
 // ======================modale======================
-
+let found = []
+let lan = ["JavaScript", "HTML", "CSS", "SQL", "Python", "Java", "Bash", "C++", "PowerShell", "C#", "PHP", "TypeScript", "C", "Ruby", "Go", "Assembly", "Swift", "Kotlin", "R", "VBA", "Objective-C", "Scala", "Rust", "Dart", "Elixir", "Clojure", "WebAssembly"]
+let langues = lan.map((j) => {
+    return j.toUpperCase();
+});
+let modalInput = document.querySelector(".modalI");
+let input = document.querySelector(".input")
+let error = document.querySelector('.zoom');
+let score = document.querySelector(".check");
+let error1 = false
+let error2 = false
+let error3 = false
+let check = 0;
 
 window.addEventListener("keydown", function (e) {
     if (
