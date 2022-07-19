@@ -32,6 +32,7 @@ let check = 0;
 window.addEventListener("keydown", function (e) {
     if (
         e.key === "a" ||
+        e.key === "b" || 
         e.key === "c" || 
         e.key === "d" || 
         e.key === "e" || 
