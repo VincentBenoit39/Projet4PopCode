@@ -18,7 +18,7 @@ a{
   margin: 0;
 }
 /* ============================Modal Game Over=================*/ 
-.modalL, .modalG, .modalI{
+.modalL, .modalG, .modalI, .modalV, .modalW{
   display: none;
   height:100vh;
   width: 100vw;
@@ -33,8 +33,10 @@ a{
   font-family: 'Poppins', sans-serif;
   z-index: 2;
 }
+.modalG, .modalW{
+  background: url(../Img/jeu.jpg) center center/cover no-repeat;
+}
 .modal-GO{
-  display: none;
   color: red;
   font-size: 8rem;
 }
@@ -58,6 +60,11 @@ a{
   font-size: 1rem;
   padding-top: 50px;
   color: white;
+}
+
+.modal-Win{
+  color: #ffaaff;
+  font-size: 4rem;
 }
 
 

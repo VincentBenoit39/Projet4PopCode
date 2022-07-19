@@ -688,11 +688,11 @@ let langues = lan.map((j) => {
 });
 let modalInput = document.querySelector(".modalI");
 let input = document.querySelector(".input")
+let error = document.querySelector('.zoom');
+let score = document.querySelector(".check");
 let error1 = false
 let error2 = false
 let error3 = false
-let error = document.querySelector('.zoom');
-let score = document.querySelector(".check");
 let check = 0;
 
 window.addEventListener("keydown", function (e) {
@@ -743,9 +743,8 @@ window.addEventListener("keydown", function (e) {
         score.innerHTML = check
         modalInput.style.display = "none";
         input.textContent = "";
-
-        if (check === 27){
-            modalWin.style.display = "flex";
+        if (check === 2){
+            document.querySelector(".modalW").style.display = "flex";
         }
     }
     if(e.key === "Enter" && input.textContent === ""){
@@ -772,7 +771,7 @@ window.addEventListener("keydown", function (e) {
             document.querySelector('.modalG').style.display = "flex";
             document.querySelector('.modal-GO').style.display = "flex";
             error3 = true
-            return
+            stop
         }
     }
 })
