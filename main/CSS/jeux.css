@@ -48,6 +48,7 @@ a{
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
 }
+
 /* ============================Modal Input=================*/ 
 .input{
   color: white;
@@ -154,7 +155,7 @@ a{
   background: #0AEFF7;
   width: 2px;
   position: absolute;
-  max-height: 126px;
+  max-height: 125px;
   left: 32px;
   bottom: 55px;
 }

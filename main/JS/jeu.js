@@ -23,12 +23,6 @@ let error2 = false
 let error3 = false
 let check = 0;
 
-
-
-
-
-
-
 window.addEventListener("keydown", function (e) {
     if (
         e.key === "a" ||
