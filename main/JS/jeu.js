@@ -10,6 +10,7 @@ zoom.addEventListener('wheel', function(){
 })
 // ======================modale======================
 
+
 window.addEventListener("keydown", function (e) {
     if (
         e.key === "a" ||
