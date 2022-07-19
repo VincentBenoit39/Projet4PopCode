@@ -147,9 +147,11 @@ a{
   bottom: 55px;
 }
 .zoombarreblue{
-  border: 1px solid #0AEFF7;
+  /* border: 1px solid #0AEFF7; */
+  background: #0AEFF7;
+  width: 2px;
   position: absolute;
-  height: 1%;
+  max-height: 126px;
   left: 32px;
   bottom: 55px;
 }
