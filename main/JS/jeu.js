@@ -19,6 +19,7 @@ let input = document.querySelector(".input")
 let error = document.querySelector('.zoom');
 let score = document.querySelector(".check");
 let error1 = false
+let error2 = false
 let error3 = false
 let check = 0;
 
