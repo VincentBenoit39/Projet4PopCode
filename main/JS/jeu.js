@@ -21,7 +21,6 @@ let score = document.querySelector(".check");
 let error1 = false
 let error2 = false
 let error3 = false
-let check = 0;
 
 
 
