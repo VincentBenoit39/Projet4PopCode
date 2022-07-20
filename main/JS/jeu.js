@@ -14,6 +14,9 @@ let lan = ["JavaScript", "HTML", "CSS", "SQL", "Python", "Java", "Bash", "C++", 
 let langues = lan.map((j) => {
     return j.toUpperCase();
 });
+let list = document.querySelector(".list")
+let modalL = document.querySelector(".modalL")
+let modalV = document.querySelector(".modalV")
 let modalInput = document.querySelector(".modalI");
 let input = document.querySelector(".input")
 let error = document.querySelector('.zoom');
@@ -22,6 +25,20 @@ let error1 = false
 let error2 = false
 let error3 = false
 let check = 0;
+
+document.querySelector(".close").addEventListener("click", function() {
+    modalL.style.display = "none";
+    modalV.style.display = "none";
+    modalInput.style.display = "none";
+})
+document.querySelector(".languagestrouver").addEventListener("click", function() {
+    console.log("1");
+    modalL.style.display = "flex";
+})
+
+
+
+
 
 window.addEventListener("keydown", function (e) {
     if (
