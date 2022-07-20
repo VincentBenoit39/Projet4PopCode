@@ -67,7 +67,6 @@ a{
   color: white;
 }
 /* ============================Modal Win=================*/ 
-
 .modal-Win{
   padding-bottom: 50px;
   font-family: 'Poppins', sans-serif;
@@ -75,28 +74,24 @@ a{
   font-size: 4rem;
 }
 /* ============================Modal List=================*/ 
-
 .list{
   color: white;
   font-family: 'Poppins', sans-serif;
   font-size: 2.8rem;
   text-align: center;
+
 }
 .modal-List{
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   padding-top: 50px;
-  color: white;
+  color: white ;
 }
-
-
-
 
 /* =================top============================ */
 .close{
   cursor: pointer;
   position: absolute;
-  display: flex;
   font-size: 2rem;
   top: 100px;
   right: 200px;
@@ -174,7 +169,7 @@ a{
 .lineZoom{
   border: 1px solid white;
   position: absolute;
-  height: 125px;
+  height: 124px;
   left: 32px;
   bottom: 55px;
 }
@@ -183,7 +178,7 @@ a{
   background: #0AEFF7;
   width: 2px;
   position: absolute;
-  max-height: 125px;
+  max-height: 127px;
   left: 32px;
   bottom: 55px;
 }

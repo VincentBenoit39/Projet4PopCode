@@ -9,31 +9,31 @@ zoom.addEventListener('wheel', function(){
     }
 })
 // ======================modale======================
-let found = []
-let lan = ["JavaScript", "HTML", "CSS", "SQL", "Python", "Java", "Bash", "C++", "PowerShell", "C#", "PHP", "TypeScript", "C", "Ruby", "Go", "Assembly", "Swift", "Kotlin", "R", "VBA", "Objective-C", "Scala", "Rust", "Dart", "Elixir", "Clojure", "WebAssembly"]
+let found = [];
+let lan = ["JavaScript", "HTML", "CSS", "SQL", "Python", "Java", "Bash", "C++", "PowerShell", "C#", "PHP", "TypeScript", "C", "Ruby", "Go", "Assembly", "Swift", "Kotlin", "R", "VBA", "Objective-C", "Scala", "Rust", "Dart", "Elixir", "Clojure", "WebAssembly"];
 let langues = lan.map((j) => {
     return j.toUpperCase();
 });
-let list = document.querySelector(".list")
-let modalL = document.querySelector(".modalL")
-let modalV = document.querySelector(".modalV")
+let list = document.querySelector(".list");
+let modalL = document.querySelector(".modalL");
+let modalV = document.querySelector(".modalV");
 let modalInput = document.querySelector(".modalI");
-let input = document.querySelector(".input")
+let input = document.querySelector(".input");
 let error = document.querySelector('.zoom');
 let score = document.querySelector(".check");
-let error1 = false
-let error2 = false
-let error3 = false
+let error1 = false;
+let error2 = false;
+let error3 = false;
 let check = 0;
 
-document.querySelector(".close").addEventListener("click", function() {
-    modalL.style.display = "none";
-    modalV.style.display = "none";
-    modalInput.style.display = "none";
-})
-document.querySelector(".languagestrouver").addEventListener("click", function() {
-    console.log("1");
+
+
+
+document.querySelector(".btnlanguagestrouver").addEventListener("click", function() {
     modalL.style.display = "flex";
+})
+modalL.childNodes[5].addEventListener("click", function() {
+    modalL.style.display = "none";
 })
 
 
@@ -75,6 +75,7 @@ window.addEventListener("keydown", function (e) {
         ) {
         modalInput.style.display = "flex";
         input.innerHTML += e.key.toUpperCase();
+        modalL.style.display = "none";
     }
     if (e.key == "Escape"){
         modalInput.style.display = "none";
@@ -84,12 +85,15 @@ window.addEventListener("keydown", function (e) {
         input.textContent = input.textContent.slice(e, -1);
     }
     if(e.key === "Enter" && langues.includes(input.innerHTML)){
+        let languesPass = langues.indexOf(input.innerHTML);
         check++;
         score.innerHTML = check
+        found.push(input.innerHTML)
+        langues.splice(languesPass, 1)
+        list.innerHTML = found.join(" - ")
         modalInput.style.display = "none";
         input.textContent = "";
-        
-        if (check === 2){
+        if (check === 27){
             document.querySelector(".modalW").style.display = "flex";
             return
         }
@@ -105,7 +109,6 @@ window.addEventListener("keydown", function (e) {
             document.querySelector('.error1').style = 'color: #0AEFF7;'
             error1 = true
             modalInput.style.display = "none";
-            moInput = false;
             return
         }
         if (error1 == true & error2 == false) {
