@@ -26,15 +26,17 @@ let error2 = false;
 let error3 = false;
 let check = 0;
 
-// fetch("./main/Json/languages.json")
+fetch("./main/Json/languages.json")
+    .then(res => res.json())
+    .then(data =>console.log(data));
 
-// let toShow = ""
-// for(let i=0;i<obj.studentsArray.length; i++){
-//     toShow +=
+let toShow = ""
+for(let i=0;i<data.languages.length; i++){
+    toShow +=
 
-// "<div class='card' style='width: 18rem; width:31%; margin:1% '><img class='card-img-top' src='"+obj.studentsArray[i].picture+"' alt='Card image cap'> <div class='card-body'><p class='card-text'>"+ obj.studentsArray[i].firstName + " " + obj.studentsArray[i].lastName+"</p> </div></div>"
-// }
-// document.getElementById("resultat").innerHTML =toShow
+"<div class='card' style='width: 18rem; width:31%; margin:1% '><img class='card-img-top' src='"+obj.studentsArray[i].picture+"' alt='Card image cap'> <div class='card-body'><p class='card-text'>"+ obj.studentsArray[i].firstName + " " + obj.studentsArray[i].lastName+"</p> </div></div>"
+}
+document.getElementById("resultat").innerHTML = toShow
 
 document.querySelector(".btnlanguagestrouver").addEventListener("click", function() {
     modalL.style.display = "flex";
