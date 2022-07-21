@@ -93,22 +93,22 @@ window.addEventListener("keydown", function (e) {
         list.innerHTML = found.join(", ")
         modalInput.style.display = "none";
         input.textContent = "";
+        if(input.innerHTML == languesPass){
+            input.textContent = "Language déja trouvés";
+            return
+        }
         if (desc == true){
             modalV.style.display = "flex";
-            let myRequeste = new Request("./main/Json/languages.json");
-            fetch (myRequeste)
-                .then(reponse => reponse.json)
-                .then(data =>
-                    let toShow = ""
-                    for(let i=0;i<obj.studentsArray.length; i++){
-                    toShow += "<div class='card' style='width: 18rem; width:31%; margin:1% '><img class='card-img-top' src='"+obj.studentsArray[i].picture+"' alt='Card image cap'> <div class='card-body'><p class='card-text'>"+ obj.studentsArray[i].firstName + " " + obj.studentsArray[i].lastName+"</p> </div></div>"
-                };
-                document.getElementById("resultat").innerHTML =toShow
-                    
-                    
-                    
-                    );
-
+            fetch("./main/Json/languages.json")
+              .then((reponse) => reponse.json())
+              .then((data) => {
+                for (let i = 0; i < data.length; i++) {
+                  if (data[i].language === input.textContent.toLowerCase()) {
+                    description.innerHTML = ` <div><h1>${data[i].language}</h1><img src=${data[i].img} alt="logo"></div>
+                  <div> <p>${data[i].desc}</p></div>`;
+                  }
+                }}
+            );
         }   
         if (check === 27){
             document.querySelector(".modalW").style.display = "flex";
