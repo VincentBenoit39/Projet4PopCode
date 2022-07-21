@@ -21,28 +21,23 @@ let modalInput = document.querySelector(".modalI");
 let input = document.querySelector(".input");
 let error = document.querySelector('.zoom');
 let score = document.querySelector(".check");
+let description = document.getElementById("modal-View")
 let error1 = false;
 let error2 = false;
 let error3 = false;
+let desc = true;
 let check = 0;
 
-fetch("./main/Json/languages.json")
-    .then(res => res.json())
-    .then(data =>console.log(data));
 
-let toShow = ""
-for(let i=0;i<data.languages.length; i++){
-    toShow +=
-
-"<div class='card' style='width: 18rem; width:31%; margin:1% '><img class='card-img-top' src='"+obj.studentsArray[i].picture+"' alt='Card image cap'> <div class='card-body'><p class='card-text'>"+ obj.studentsArray[i].firstName + " " + obj.studentsArray[i].lastName+"</p> </div></div>"
-}
-document.getElementById("resultat").innerHTML = toShow
 
 document.querySelector(".btnlanguagestrouver").addEventListener("click", function() {
     modalL.style.display = "flex";
 })
 modalL.childNodes[5].addEventListener("click", function() {
     modalL.style.display = "none";
+})
+modalV.childNodes[3].addEventListener("click", function() {
+    modalV.style.display = "none";
 })
 
 window.addEventListener("keydown", function (e) {
@@ -95,10 +90,27 @@ window.addEventListener("keydown", function (e) {
         score.innerHTML = check
         found.push(input.innerHTML)
         langues.splice(languesPass, 1)
-        list.innerHTML = found.join(" - ")
+        list.innerHTML = found.join(", ")
         modalInput.style.display = "none";
         input.textContent = "";
-        if (check === 2){
+        if (desc == true){
+            modalV.style.display = "flex";
+            let myRequeste = new Request("./main/Json/languages.json");
+            fetch (myRequeste)
+                .then(reponse => reponse.json)
+                .then(data =>
+                    let toShow = ""
+                    for(let i=0;i<obj.studentsArray.length; i++){
+                    toShow += "<div class='card' style='width: 18rem; width:31%; margin:1% '><img class='card-img-top' src='"+obj.studentsArray[i].picture+"' alt='Card image cap'> <div class='card-body'><p class='card-text'>"+ obj.studentsArray[i].firstName + " " + obj.studentsArray[i].lastName+"</p> </div></div>"
+                };
+                document.getElementById("resultat").innerHTML =toShow
+                    
+                    
+                    
+                    );
+
+        }   
+        if (check === 27){
             document.querySelector(".modalW").style.display = "flex";
             return
         }
