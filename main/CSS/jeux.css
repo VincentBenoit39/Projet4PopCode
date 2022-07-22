@@ -22,7 +22,7 @@ a{
   padding: 0;
 }
 /* ============================Modal Game Over=================*/ 
-.modalL, .modalG, .modalI, .modalV, .modalW{
+.modalL, .modalG, .modalI, .modalW{
   display: none;
   height:100vh;
   width: 100vw;
@@ -87,19 +87,44 @@ a{
   padding-top: 50px;
   color: white ;
 }
-
-
-
-.modal-view {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
+/* ============================Modal description=================*/ 
+.modalV{
+  display: none;
+  height:100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  justify-content: center;
   align-items: center;
-  gap: 2vw;
+  position: absolute;
+  background: #0000008e;
+  transition: opacity 0.4s 0.2s ease-out;
+  font-family: 'Poppins', sans-serif;
+  z-index: 2;
+}
+.modal-View {
+  width: 75%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
   color: white;
   font-family: 'poppins', sans-serif;
   animation: blurEffect 0.2s ease-in-out;
 }
+.view-img{
+  width: 250px;
+  height: 250px;
+}
+.view-name{
+  font-size: 2rem;
+  height: 25%;
+}
+.view-desc{
+  font-size: 0.8rem;
+  width: 50%;
+}
+
+
 /* =================top============================ */
 .close{
   cursor: pointer;
@@ -232,7 +257,7 @@ button {
   right: 0px;
   display: flex;
 }
-.m1>a, .m2>a{
+.m1>a{
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   animation: none;
@@ -243,7 +268,7 @@ button {
   padding-right: 10px;
   padding-left: 10px;
 }
-.m1:after, .m2:after{
+.m1:after{
   content: '';
   display: block;
   position: absolute;
@@ -253,9 +278,6 @@ button {
   background: #ffffff;
 }
 .m1:hover:after {
-  width: 40%;
-}
-.m2:hover:after {
   width: 100%;
 }
 

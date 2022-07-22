@@ -21,7 +21,8 @@ let modalInput = document.querySelector(".modalI");
 let input = document.querySelector(".input");
 let error = document.querySelector('.zoom');
 let score = document.querySelector(".check");
-let description = document.getElementById("modal-View")
+let description = document.querySelector(".modal-View");
+
 let error1 = false;
 let error2 = false;
 let error3 = false;
@@ -87,29 +88,33 @@ window.addEventListener("keydown", function (e) {
     if(e.key === "Enter" && langues.includes(input.innerHTML)){
         let languesPass = langues.indexOf(input.innerHTML);
         check++;
-        score.innerHTML = check
-        found.push(input.innerHTML)
-        langues.splice(languesPass, 1)
-        list.innerHTML = found.join(", ")
-        modalInput.style.display = "none";
-        input.textContent = "";
-        if(input.innerHTML == languesPass){
-            input.textContent = "Language déja trouvés";
-            return
-        }
-        if (desc == true){
+        setTimeout(function(){ 
+            score.innerHTML = check
+            found.push(input.innerHTML)
+            langues.splice(languesPass, 1)
+            list.innerHTML = found.join(", ")
+            input.textContent = "";
+            modalInput.style.display = "none";
             modalV.style.display = "flex";
+        }, 800);
+        // if(input.innerHTML == languesPass){
+            //     input.textContent = "Language déja trouvés";
+            //     return
+            //
             fetch("./main/Json/languages.json")
-              .then((reponse) => reponse.json())
-              .then((data) => {
-                for (let i = 0; i < data.length; i++) {
-                  if (data[i].language === input.textContent.toLowerCase()) {
-                    description.innerHTML = ` <div><h1>${data[i].language}</h1><img src=${data[i].img} alt="logo"></div>
-                  <div> <p>${data[i].desc}</p></div>`;
-                  }
-                }}
-            );
-        }   
+            .then((reponse) => reponse.json())
+            .then((data) => {
+                for (let i = 0; i < data.languages.langage.length; i++) {
+                    console.log(data.languages.langage[i].name);
+                    if (data.languages.langage[i].name === input.textContent.toLowerCase()) {
+                        description.innerHTML = 
+                        `<div class="view-name">${data.languages.langage[i].name}</div><img class="view-img" src=${data.languages.langage[i].picture} alt="logo"></div>
+                        <div class="view-desc"><p >${data.languages.langage[i].description}</p></div>`
+                        break
+                    }
+                      }
+                }
+                );
         if (check === 27){
             document.querySelector(".modalW").style.display = "flex";
             return
