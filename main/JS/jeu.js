@@ -18,10 +18,12 @@ let list = document.querySelector(".list");
 let modalL = document.querySelector(".modalL");
 let modalV = document.querySelector(".modalV");
 let modalInput = document.querySelector(".modalI");
+let modalM = document.querySelector(".modalM");
 let input = document.querySelector(".input");
 let error = document.querySelector('.zoom');
 let score = document.querySelector(".check");
 let description = document.querySelector(".modal-View");
+let mention = document.querySelector(".modal-Mention");
 
 let error1 = false;
 let error2 = false;
@@ -30,6 +32,15 @@ let desc = true;
 let check = 0;
 
 
+document.querySelector(".m1").addEventListener("click", function() {
+    modalM.style.display = "flex";
+    // fetch("./main/Json/languages.json")
+    // .then((reponse) => reponse.json())
+    // .then((data) => {
+    //     mention.innerHTML = 
+    //         `<div class="mention">${data.legals.legal[i].content}</div>`
+    //     })
+    })
 
 document.querySelector(".btnlanguagestrouver").addEventListener("click", function() {
     modalL.style.display = "flex";
@@ -85,36 +96,31 @@ window.addEventListener("keydown", function (e) {
     if (e.key == "Backspace"){
         input.textContent = input.textContent.slice(e, -1);
     }
+    let languesPass = langues.indexOf(input.innerHTML);
     if(e.key === "Enter" && langues.includes(input.innerHTML)){
-        let languesPass = langues.indexOf(input.innerHTML);
         check++;
         setTimeout(function(){ 
             score.innerHTML = check
             found.push(input.innerHTML)
             langues.splice(languesPass, 1)
-            list.innerHTML = found.join(", ")
+            list.innerHTML = found.join(" - ")
             input.textContent = "";
             modalInput.style.display = "none";
             modalV.style.display = "flex";
         }, 800);
-        // if(input.innerHTML == languesPass){
-            //     input.textContent = "Language déja trouvés";
-            //     return
-            //
-            fetch("./main/Json/languages.json")
+        fetch("./main/Json/languages.json")
             .then((reponse) => reponse.json())
             .then((data) => {
                 for (let i = 0; i < data.languages.langage.length; i++) {
                     console.log(data.languages.langage[i].name);
                     if (data.languages.langage[i].name === input.textContent.toLowerCase()) {
                         description.innerHTML = 
-                        `<div class="view-name">${data.languages.langage[i].name}</div><img class="view-img" src=${data.languages.langage[i].picture} alt="logo"></div>
+                        `<div class="view-name">${data.languages.langage[i].name}</div></div class="descriptionFlexRow"><img class="view-img" src=${data.languages.langage[i].picture} alt="logo">
                         <div class="view-desc"><p >${data.languages.langage[i].description}</p></div>`
                         break
-                    }
-                      }
+                    }}
                 }
-                );
+            );
         if (check === 27){
             document.querySelector(".modalW").style.display = "flex";
             return
@@ -125,26 +131,36 @@ window.addEventListener("keydown", function (e) {
         return;
     }
     if(e.key === "Enter" && !langues.includes(input.innerHTML)){
-        modalInput.style.display = "none";
-        input.textContent = "";
-        if (error1 == false & error1 != true) {
-            document.querySelector('.error1').style = 'color: #0AEFF7;'
-            error1 = true
+        if(found.includes(input.textContent)){
+            modalInput.style.display = "flex";
+            input.innerHTML = "Language déja trouvés";
+            setTimeout(function() {
+                input.textContent = "";
+                modalInput.style.display = "none";
+            }, 800)
+            return
+        }
+        else{
             modalInput.style.display = "none";
-            return
-        }
-        if (error1 == true & error2 == false) {
-            document.querySelector('.error2').style = 'color: #0AEFF7;'
-            error2 = true
-            return
-        }
-        if (error2 == true & error3 == false) {
-            document.querySelector('.error3').style = 'color: #0AEFF7;'
-            document.querySelector('.modalG').style.display = "flex";
-            document.querySelector('.modal-GO').style.display = "flex";
-            error3 = true
-            stop
-        }
+            input.textContent = "";
+            if (error1 == false & error1 != true) {
+                document.querySelector('.error1').style = 'color: #0AEFF7;'
+                error1 = true
+                modalInput.style.display = "none";
+                return
+            }
+            if (error1 == true & error2 == false) {
+                document.querySelector('.error2').style = 'color: #0AEFF7;'
+                error2 = true
+                return
+            }
+            if (error2 == true & error3 == false) {
+                document.querySelector('.error3').style = 'color: #0AEFF7;'
+                document.querySelector('.modalG').style.display = "flex";
+                document.querySelector('.modal-GO').style.display = "flex";
+                error3 = true
+                stop
+            }}
     }
 })
 

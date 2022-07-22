@@ -22,7 +22,7 @@ a{
   padding: 0;
 }
 /* ============================Modal Game Over=================*/ 
-.modalL, .modalG, .modalI, .modalW{
+.modalL, .modalG, .modalI, .modalW, .modalM, .modalE{
   display: none;
   height:100vh;
   width: 100vw;
@@ -57,7 +57,7 @@ a{
   font-size: 2.8rem;
   text-align: center;
   overflow: hidden;
-  height: 50px;
+  height: 80px;
   width: 50%;
 }
 .pInput{
@@ -107,6 +107,7 @@ a{
   align-items: center;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   color: white;
   font-family: 'poppins', sans-serif;
   animation: blurEffect 0.2s ease-in-out;
@@ -116,11 +117,10 @@ a{
   height: 250px;
 }
 .view-name{
-  font-size: 2rem;
+  font-size: 8rem;
   height: 25%;
 }
 .view-desc{
-  font-size: 0.8rem;
   width: 50%;
 }
 
@@ -129,7 +129,7 @@ a{
 .close{
   cursor: pointer;
   position: absolute;
-  font-size: 2rem;
+  font-size: 4rem;
   top: 100px;
   right: 200px;
   font-family: 'Poppins', sans-serif;
@@ -226,8 +226,8 @@ button {
   height: 3em;
   bottom: 20px;
   left: 80px;
-  color: white;
-  border-color: white;
+  color: #ffaaff;
+  border-color: #ffaaff;
   font-weight: bold;
   align-items: center;
   justify-content: center;
@@ -240,15 +240,14 @@ button {
  button > img {
   margin-right: 5px;
   margin-left: 5px;
+  color: #ffaaff;
+  border-color: #ffaaff;
   font-size: 20px;
   transition: all 0.2s ease-in;
  }
  button:hover > img {
   font-size: 1.8em;
   transform: rotate(360deg);
- }
- button:hover {
-  transform: translateY(-2px);
  }
 /* ============================mention======================== */
 .mention{
@@ -261,7 +260,7 @@ button {
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   animation: none;
-  color: white;
+  color: #ffaaff;
   font-weight: bold;
   display: inline;
   text-decoration: none;
@@ -275,7 +274,7 @@ button {
   width: 0%;
   height: 3px;
   transition: 0.5s cubic-bezier(0.72,-0.01, 0.19, 0.92);
-  background: #ffffff;
+  background: #ffaaff;
 }
 .m1:hover:after {
   width: 100%;
