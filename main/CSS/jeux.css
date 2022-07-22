@@ -252,6 +252,7 @@ button {
 /* ============================mention======================== */
 .mention{
   position: absolute;
+  padding-right: 20px;
   bottom: 10px;
   right: 0px;
   display: flex;
@@ -262,6 +263,7 @@ button {
   animation: none;
   color: #ffaaff;
   font-weight: bold;
+  cursor: pointer;
   display: inline;
   text-decoration: none;
   padding-right: 10px;
@@ -277,7 +279,7 @@ button {
   background: #ffaaff;
 }
 .m1:hover:after {
-  width: 100%;
+  width: 90%;
 }
 
 
