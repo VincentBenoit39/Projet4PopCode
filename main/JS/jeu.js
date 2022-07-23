@@ -23,7 +23,8 @@ let input = document.querySelector(".input");
 let error = document.querySelector('.zoom');
 let score = document.querySelector(".check");
 let description = document.querySelector(".modal-View");
-let mention = document.querySelector(".modal-Mention");
+let btnMention = document.querySelector(".m1");
+let mention = document.querySelector(".modal-Mention")
 
 let error1 = false;
 let error2 = false;
@@ -31,16 +32,20 @@ let error3 = false;
 let desc = true;
 let check = 0;
 
-
-document.querySelector(".m1").addEventListener("click", function() {
+btnMention.addEventListener("click", () => {
     modalM.style.display = "flex";
-    // fetch("./main/Json/languages.json")
-    // .then((reponse) => reponse.json())
-    // .then((data) => {
-    //     mention.innerHTML = 
-    //         `<div class="mention">${data.legals.legal[i].content}</div>`
-    //     })
-    })
+    fetch("./main/Json/languages.json")
+        .then((response) => response.json())
+        .then((data) => {
+            for (let z = 0; z < data.legals.legal.length; z++) {
+                if (data.legals.legal[z].content) {
+                console.log("ok");
+                mention.innerHTML = `<div class="mention">${data.legals.legal[z].content}</div>`;
+                break
+            }
+          }
+        });
+});
 
 document.querySelector(".btnlanguagestrouver").addEventListener("click", function() {
     modalL.style.display = "flex";
@@ -163,5 +168,41 @@ window.addEventListener("keydown", function (e) {
             }}
     }
 })
+// ============================================cursor==========================
+// let cursor = document.querySelector(".cursor")
+// let cursorinner = document.querySelector(".cursor2")
+// let a = document.querySelectorAll(".hovereffect")
+
+// document.addEventListener("mousemove", function (e) {
+//   let x = e.clientX
+//   let y = e.clientY
+//   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+// })
+
+// document.addEventListener("mousemove", function (e) {
+//   let x = e.clientX
+//   let y = e.clientY
+//   cursorinner.style.left = x + "px"
+//   cursorinner.style.top = y + "px"
+// });
+
+// document.addEventListener("mousedown", function () {
+//   cursor.classList.add("click")
+//   cursorinner.classList.add("cursorinnerhover")
+// });
+
+// document.addEventListener("mouseup", function () {
+//   cursor.classList.remove("click")
+//   cursorinner.classList.remove("cursorinnerhover")
+// });
+
+// a.forEach((item) => {
+//   item.addEventListener("mouseover", () => {
+//     cursor.classList.add("hover")
+//   })
+//   item.addEventListener("mouseleave", () => {
+//     cursor.classList.remove("hover")
+//   })
+// })
 
 

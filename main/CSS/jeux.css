@@ -6,7 +6,7 @@
 body{
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 a{
   text-decoration: none;
@@ -122,6 +122,18 @@ a{
 }
 .view-desc{
   width: 50%;
+}
+.modal-Mention {
+  color: white;
+  width: 40%;
+  top: 50%;
+  position: absolute;
+  overflow: auto;
+  height: 96vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 25px;
+  font-family: 'poppins', sans-serif;
 }
 
 
