@@ -6,7 +6,7 @@
 body{
   height: 100vh;
   width: 100vw;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 a{
   text-decoration: none;
@@ -22,7 +22,7 @@ a{
   padding: 0;
 }
 /* ============================Modal Game Over=================*/ 
-.modalL, .modalG, .modalI, .modalW, .modalM, .modalE{
+.modalL, .modalG, .modalI, .modalW, .modalM, .modalE, .modalS{
   display: none;
   height:100vh;
   width: 100vw;
@@ -117,23 +117,56 @@ a{
   height: 250px;
 }
 .view-name{
+  top: 20%;
+  left: 50%;
+  position: absolute;
   font-size: 8rem;
   height: 25%;
+  transform: translate(-50%, -50%);
 }
 .view-desc{
   width: 50%;
+  height: 25%;
+  overflow: auto;
 }
+/* ============================Modal Mention=================*/ 
 .modal-Mention {
   color: white;
-  width: 40%;
+  width: 50%;
   top: 50%;
+  left: 50%;
   position: absolute;
   overflow: auto;
-  height: 96vh;
-  left: 50%;
+  height: 70vh;
   transform: translate(-50%, -50%);
   padding: 0 25px;
   font-family: 'poppins', sans-serif;
+}
+.modalM>h2{
+  color: #0AEFF7;
+  transform: translate(-10%, -50%);
+  top: 10%;
+  left: 45%;
+  position: absolute;  
+}
+/* ============================Modal start=================*/ 
+.modal-Start{
+  color: #0AEFF7;
+  width: 50%;
+  font-size: 2rem;
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'poppins', sans-serif;
+  animation: blurEffect 0.2s ease-in-out;
+}
+.modal-Start>h1{
+  text-align: center;
+  padding-bottom: 50px;
+}
+.modal-Start>span{
+  padding-bottom: 20px;
 }
 
 
@@ -151,7 +184,7 @@ a{
   position: absolute;
   display: flex;
   top: 10px;
-  left: 10px;
+  left: 20px;
   font-family: 'Poppins', sans-serif;
 }
 .score{

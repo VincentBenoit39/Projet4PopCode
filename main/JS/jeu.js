@@ -8,6 +8,11 @@ zoom.addEventListener('wheel', function(){
         zoombarreblue.style.height = `${n}pc`;
     }
 })
+window.onload = setTimeout(start, 500);
+
+function start() {
+  modalS.style.display = "flex";
+};
 // ======================modale======================
 let found = [];
 let lan = ["JavaScript", "HTML", "CSS", "SQL", "Python", "Java", "Bash", "C++", "PowerShell", "C#", "PHP", "TypeScript", "C", "Ruby", "Go", "Assembly", "Swift", "Kotlin", "R", "VBA", "Objective-C", "Scala", "Rust", "Dart", "Elixir", "Clojure", "WebAssembly"];
@@ -20,16 +25,15 @@ let modalV = document.querySelector(".modalV");
 let modalInput = document.querySelector(".modalI");
 let modalM = document.querySelector(".modalM");
 let input = document.querySelector(".input");
-let error = document.querySelector('.zoom');
 let score = document.querySelector(".check");
 let description = document.querySelector(".modal-View");
 let btnMention = document.querySelector(".m1");
 let mention = document.querySelector(".modal-Mention")
+let modalS = document.querySelector(".modalS")
 
 let error1 = false;
 let error2 = false;
 let error3 = false;
-let desc = true;
 let check = 0;
 
 btnMention.addEventListener("click", () => {
@@ -39,8 +43,7 @@ btnMention.addEventListener("click", () => {
         .then((data) => {
             for (let z = 0; z < data.legals.legal.length; z++) {
                 if (data.legals.legal[z].content) {
-                console.log("ok");
-                mention.innerHTML = `<div class="mention">${data.legals.legal[z].content}</div>`;
+                mention.innerHTML = `${data.legals.legal[z].content}`;
                 break
             }
           }
@@ -52,6 +55,12 @@ document.querySelector(".btnlanguagestrouver").addEventListener("click", functio
 })
 modalL.childNodes[5].addEventListener("click", function() {
     modalL.style.display = "none";
+})
+modalM.childNodes[5].addEventListener("click", function() {
+    modalM.style.display = "none";
+})
+modalS.childNodes[3].addEventListener("click", function() {
+    modalS.style.display = "none";
 })
 modalV.childNodes[3].addEventListener("click", function() {
     modalV.style.display = "none";

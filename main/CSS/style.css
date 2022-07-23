@@ -37,7 +37,7 @@ body{
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   animation: none;
-  color: white;
+  color: #ffaaff;
   font-weight: bold;
   display: inline;
   text-decoration: none;
@@ -51,7 +51,7 @@ body{
   width: 0%;
   height: 3px;
   transition: 0.5s cubic-bezier(0.72,-0.01, 0.19, 0.92);
-  background: #ffffff;
+  background: #ffaaff;
 }
 .m1:hover:after {
   width: 100%;
@@ -129,4 +129,24 @@ body{
 }
 a:hover:after {
   width: 100%;
+}
+/* ============================Modal Mention=================*/ 
+.modal-Mention {
+  color: white;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  overflow: auto;
+  height: 70vh;
+  transform: translate(-50%, -50%);
+  padding: 0 25px;
+  font-family: 'poppins', sans-serif;
+}
+.modalM>h2{
+  color: #0AEFF7;
+  transform: translate(-10%, -50%);
+  top: 10%;
+  left: 45%;
+  position: absolute;  
 }
