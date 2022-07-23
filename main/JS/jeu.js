@@ -129,8 +129,8 @@ window.addEventListener("keydown", function (e) {
                     console.log(data.languages.langage[i].name);
                     if (data.languages.langage[i].name === input.textContent.toLowerCase()) {
                         description.innerHTML = 
-                        `<div class="view-name">${data.languages.langage[i].name}</div></div class="descriptionFlexRow"><img class="view-img" src=${data.languages.langage[i].picture} alt="logo">
-                        <div class="view-desc"><p >${data.languages.langage[i].description}</p></div>`
+                        `<div class="view-name">${data.languages.langage[i].name}</div><img class="view-img" src=${data.languages.langage[i].picture} alt="logo">
+                        <p>${data.languages.langage[i].description}</p>`
                         break
                     }}
                 }
