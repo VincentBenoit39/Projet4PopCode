@@ -101,7 +101,10 @@ window.addEventListener("keydown", function (e) {
         ) {
         modalInput.style.display = "flex";
         input.innerHTML += e.key.toUpperCase();
+        modalM.style.display = "none";
+        modalS.style.display = "none";
         modalL.style.display = "none";
+        modalV.style.display = "none";
     }
     if (e.key == "Escape"){
         modalInput.style.display = "none";
@@ -113,10 +116,6 @@ window.addEventListener("keydown", function (e) {
     let languesPass = langues.indexOf(input.innerHTML);
     if(e.key === "Enter" && langues.includes(input.innerHTML)){
         check++;
-        modalM.style.display = "none";
-        modalS.style.display = "none";
-        modalL.style.display = "none";
-        modalV.style.display = "none";
         setTimeout(function(){ 
             score.innerHTML = check
             found.push(input.innerHTML)
