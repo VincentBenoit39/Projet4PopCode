@@ -113,6 +113,10 @@ window.addEventListener("keydown", function (e) {
     let languesPass = langues.indexOf(input.innerHTML);
     if(e.key === "Enter" && langues.includes(input.innerHTML)){
         check++;
+        modalM.style.display = "none";
+        modalS.style.display = "none";
+        modalL.style.display = "none";
+        modalV.style.display = "none";
         setTimeout(function(){ 
             score.innerHTML = check
             found.push(input.innerHTML)
