@@ -9,6 +9,10 @@ body{
   height: 100vh;
   overflow: hidden;
 }
+a{
+  text-decoration: none;
+  color: #ffaaff;
+}
 
 .loader {
   font-size: 10rem;
@@ -39,6 +43,7 @@ body{
   animation: none;
   color: #ffaaff;
   font-weight: bold;
+  cursor: pointer;
   display: inline;
   text-decoration: none;
   padding-right: 10px;
@@ -130,7 +135,22 @@ body{
 a:hover:after {
   width: 100%;
 }
-/* ============================Modal Mention=================*/ 
+/* ============================Modal Mention=================*/
+.modalM{
+  display: none;
+  height:100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  background: #0000008e;
+  transition: opacity 0.4s 0.2s ease-out;
+  font-family: 'Poppins', sans-serif;
+  z-index: 2;
+} 
 .modal-Mention {
   color: white;
   width: 50%;
@@ -149,4 +169,12 @@ a:hover:after {
   top: 10%;
   left: 45%;
   position: absolute;  
+}
+.close{
+  cursor: pointer;
+  position: absolute;
+  font-size: 4rem;
+  top: 100px;
+  right: 200px;
+  font-family: 'Poppins', sans-serif;
 }

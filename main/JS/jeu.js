@@ -101,9 +101,9 @@ window.addEventListener("keydown", function (e) {
         ) {
         modalInput.style.display = "flex";
         input.innerHTML += e.key.toUpperCase();
+        modalL.style.display = "none";
         modalM.style.display = "none";
         modalS.style.display = "none";
-        modalL.style.display = "none";
         modalV.style.display = "none";
     }
     if (e.key == "Escape"){
@@ -130,7 +130,7 @@ window.addEventListener("keydown", function (e) {
             .then((data) => {
                 for (let i = 0; i < data.languages.langage.length; i++) {
                     console.log(data.languages.langage[i].name);
-                    if (data.languages.langage[i].name === input.textContent.toLowerCase()) {
+                    if (data.languages.langage[i].name === input.textContent) {
                         description.innerHTML = 
                         `<div class="view-name">${data.languages.langage[i].name}</div><img class="view-img" src=${data.languages.langage[i].picture} alt="logo">
                         <p>${data.languages.langage[i].description}</p>`
