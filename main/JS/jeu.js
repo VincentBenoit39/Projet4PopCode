@@ -38,7 +38,7 @@ let check = 0;
 
 btnMention.addEventListener("click", () => {
     modalM.style.display = "flex";
-    fetch("./main/Json/languages.json")
+    fetch("main/Json/languages.json")
         .then((response) => response.json())
         .then((data) => {
             for (let z = 0; z < data.legals.legal.length; z++) {
@@ -125,15 +125,15 @@ window.addEventListener("keydown", function (e) {
             modalInput.style.display = "none";
             modalV.style.display = "flex";
         }, 800);
-        fetch("./main/Json/languages.json")
+        fetch("main/Json/languages.json")
             .then((reponse) => reponse.json())
             .then((data) => {
                 for (let i = 0; i < data.languages.langage.length; i++) {
-                    console.log(data.languages.langage[i].name);
-                    if (data.languages.langage[i].name === input.textContent) {
+                    if (data.languages.langage[i].name === input.textContent.toLocaleLowerCase()) {
                         description.innerHTML = 
                         `<div class="view-name">${data.languages.langage[i].name}</div><img class="view-img" src=${data.languages.langage[i].picture} alt="logo">
-                        <p>${data.languages.langage[i].description}</p>`
+                        <p>${data.languages.langage[i].description}</p><label id="fermeturefenetre>FERMER AUTOMATIQUEMENT CETTE FENETRE APRÈS 2S<input type="checkbox" checked="checked"><span class="checkmark"></span></label>
+                        `
                         break
                     }}
                 }

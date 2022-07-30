@@ -271,14 +271,14 @@ a{
   height: 30px;
   width: 30px;
   color: #ffaaff;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: 'Poppins', sans-serif;
   border: #ffaaff 1px solid;
   border-radius: 50%;
   transform: rotate(180deg);
-}
-.info>span{
-  padding-left: 11px;
 }
 button {
   position: absolute;
