@@ -257,7 +257,6 @@ a{
   bottom: 55px;
 }
 .zoombarreblue{
-  /* border: 1px solid #0AEFF7; */
   background: #0AEFF7;
   width: 2px;
   position: absolute;
@@ -267,12 +266,19 @@ a{
 }
 .info{
   position: absolute;
-  bottom: 200px;
-  left: 250px;
-  height: 50px;
-  width: 50px;
+  bottom: 23px;
+  left: 290px;
+  height: 30px;
+  width: 30px;
   color: #ffaaff;
-  font-size: 5rem;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  border: #ffaaff 1px solid;
+  border-radius: 50%;
+  transform: rotate(180deg);
+}
+.info>span{
+  padding-left: 11px;
 }
 button {
   position: absolute;
