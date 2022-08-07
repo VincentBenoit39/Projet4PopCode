@@ -315,7 +315,6 @@ button {
   padding-right: 20px;
   bottom: 10px;
   right: 0px;
-  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   animation: none;
   color: #ffaaff;
@@ -323,7 +322,7 @@ button {
   cursor: pointer;
   distatssplay: inline;
   testatsxt-decoration: none;
-  padding-right: 10px;
+  pastatsdding-right: 10px;
   padding-left: 10px;
 }
 .m1:after{
