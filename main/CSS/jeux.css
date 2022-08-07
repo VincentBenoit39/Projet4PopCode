@@ -315,7 +315,6 @@ button {
   padding-right: 20px;
   bottom: 10px;
   right: 0px;
-  display: flex;
 }
 .m1>a{
   font-size: 1rem;
@@ -323,7 +322,7 @@ button {
   color: #ffaaff;
   font-weight: bold;
   cursor: pointer;
-  display: inline;
+  distatssplay: inline;
   text-decoration: none;
   padding-right: 10px;
   padding-left: 10px;
