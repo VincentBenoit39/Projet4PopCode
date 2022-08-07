@@ -315,7 +315,6 @@ button {
   padding-right: 20px;
   bottom: 10px;
   right: 0px;
-  font-size: 1rem;
   animation: none;
   color: #ffaaff;
   font-weight: bold;
@@ -323,7 +322,7 @@ button {
   distatssplay: inline;
   testatsxt-decoration: none;
   pastatsdding-right: 10px;
-  padding-left: 10px;
+  pastatsdding-left: 10px;
 }
 .m1:after{
   content: '';
