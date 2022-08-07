@@ -323,8 +323,7 @@ button {
   color: #ffaaff;
   font-weight: bold;
   cursor: pointer;
-  display: inline;
-  text-decoration: none;
+z  text-decoration: none;
   padding-right: 10px;
   padding-left: 10px;
 }
